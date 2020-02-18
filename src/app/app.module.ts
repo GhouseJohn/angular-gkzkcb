@@ -11,7 +11,7 @@ import{FoodComponent} from './FoodComponent'
 import{HomeComponent} from './Home/HomeComponent'
 import{PageNotfoundComponent} from './Home/PageNotFoundComponent'
 
-
+import{ListofFoodComponent} from './FoodMenu/ListofFoodComponent'
 import{AppRoutingModule} from './AppRoutingModule '
 
 import { RouterModule, Routes } from '@angular/router';
@@ -24,6 +24,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
   { path: 'crisis-center', component: FoodComponent },
+  { path: 'ListOfFood', component: ListofFoodComponent },
+
   { path: 'heroes',        component: HelloComponent },
   { path: '',        component: HomeComponent },
  // { path: '',   redirectTo: '/heroes', pathMatch: 'full' },
@@ -36,7 +38,7 @@ const appRoutes: Routes = [
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     )],
-  declarations: [ AppComponent, HelloComponent,FoodComponent,HomeComponent,PageNotfoundComponent],
+  declarations: [ AppComponent, HelloComponent,FoodComponent,HomeComponent,PageNotfoundComponent,ListofFoodComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
