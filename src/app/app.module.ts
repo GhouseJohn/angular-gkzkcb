@@ -7,7 +7,6 @@ import { HelloComponent } from './hello.component';
 import {MatButtonModule} from '@angular/material/button';
 import{MaterialModule} from './material-module'
 import{FoodComponent} from './FoodComponent'
-//import{HomeComponent} from '.././Home/HomeComponent'
 import{HomeComponent} from './Home/HomeComponent'
 import{PageNotfoundComponent} from './Home/PageNotFoundComponent'
 
@@ -17,7 +16,7 @@ import{AppRoutingModule} from './AppRoutingModule '
 import { RouterModule, Routes } from '@angular/router';
   import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
-
+//import{CompoenentRegModule} from './ComponentRegModule'
 
 
 
@@ -25,10 +24,9 @@ import { RouterModule, Routes } from '@angular/router';
 const appRoutes: Routes = [
   { path: 'crisis-center', component: FoodComponent },
   { path: 'ListOfFood', component: ListofFoodComponent },
-
   { path: 'heroes',        component: HelloComponent },
   { path: '',        component: HomeComponent },
- // { path: '',   redirectTo: '/heroes', pathMatch: 'full' },
+
   { path: '**', component: PageNotfoundComponent }
 ];
 @NgModule({
@@ -39,6 +37,8 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     )],
   declarations: [ AppComponent, HelloComponent,FoodComponent,HomeComponent,PageNotfoundComponent,ListofFoodComponent],
+ // declarations: [ AppComponent,CompoenentRegModule],
+
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
